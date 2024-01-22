@@ -11,7 +11,7 @@ const App = () => {
           <Navbar />
           <AppRoutes/>
       </Router> */}
-      <Navbar />
+      
       <Experience/>
     
     </main>

@@ -12,16 +12,16 @@ const ProductCard = ({product}:Props) => {
 
   return (
     <div className={style.container}>
-        {/* <div className={style.image_container}>
+        <div className={style.image_container}>
           
-            
-        </div> */}
-       {/*  <Experience/> */}
+             <Experience/>
+        </div>
+       
         <div className={style.info_container}>
             <h3 className={style.name}>{name}</h3>
             <p className={style.description}>{description}</p>
             <span className={style.price}>$ {price}</span>
-            <Experience/>
+           
         </div>
     </div>
   )

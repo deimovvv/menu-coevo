@@ -2,20 +2,32 @@
 
 :root {
   --bg-color: #131111;
-  --bg-nav: #1a1a1a;
-  --txt-color: #ffffff
+  --bg-nav: whitesmoke;
+  --txt-color: #131111
+  
 }
+
+.canvas-test{
+ 
+
+}
+
 
 body {
   margin: 0;
   padding: 0;
   max-width: 100vw;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   min-height: 100vh;
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
+  background-color: whitesmoke;
   color: var(--txt-color);
   font-family: 'Fragment Mono', monospace;
+
+ 
 }
+
+
 
 *{
   padding: 0;
@@ -25,6 +37,8 @@ body {
 
 .main{
   position: relative;
+  width: 100%;
+  height: 100vh;
 }
 
 li {

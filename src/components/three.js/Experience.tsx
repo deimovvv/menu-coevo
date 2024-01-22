@@ -1,36 +1,38 @@
-import { Canvas, useThree } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
-import { Suspense } from "react";
-import { Model } from "./Model";
+import { OrbitControls } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber'
+import {useLoader} from '@react-three/fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 
+/* import {Perf} from 'r3f-perf' */
+/*  */
 
 
+export default function Experience(){
 
-// componenente para renderizar three.js
-// que adentro renderizo el modelo
-const Experience = () => {
-  return (
-    <>
-      <Canvas camera={{ position: [-0.7, 0, -1] }}> {/* -4 */}
-        <OrbitControls updateDefaultCamera={true} enableZoom={false} />
+const model = useLoader(GLTFLoader, '/public/models/PizzaOptimizada2.glb')
 
-        {/* Lighting */}
-        <directionalLight position={[0, 5, 3]} intensity={5} />
-        <pointLight color={"purple"} intensity={0.5}></pointLight>
-        <pointLight color={"green"} intensity={1.2}></pointLight>
-        
 
-        {/* 3D MODEL */}
-        
-        <Suspense fallback={null}>   
-          <Model/>
-        </Suspense>
+    return <Canvas 
+        className="canvas-test"
+    shadows
+        camera={ {
+            fov: 45,
+            near: 0.1,
+            far: 200,
+            position: [ - 4, 3, 6 ]
+        } }
+        >
 
-        
-      </Canvas>
-    </>
-  );
-};
+    
 
-export default Experience;
+        <OrbitControls makeDefault />
+
+        <directionalLight castShadow position={ [ 1, 2, 3 ] } intensity={ 10.5 } />
+        <ambientLight intensity={ 1.5 } />
+
+
+        <primitive    scale={ 1.2 } object={ model.scene } />
+
+    </Canvas>
+}

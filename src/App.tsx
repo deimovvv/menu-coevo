@@ -7,12 +7,12 @@ const App = () => {
 
   return (
     <main className="main">
-      {/* <Router>
+      <Router>
           <Navbar />
           <AppRoutes/>
-      </Router> */}
+      </Router>
       
-      <Experience/>
+      
     
     </main>
     

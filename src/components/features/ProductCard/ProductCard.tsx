@@ -11,10 +11,11 @@ const ProductCard = ({product}:Props) => {
     const {name, description, price, image} = product
 
   return (
+    <>  
     <div className={style.container}>
         <div className={style.image_container}>
-          
-             <Experience/>
+        <Experience/>
+             
         </div>
        
         <div className={style.info_container}>
@@ -24,6 +25,7 @@ const ProductCard = ({product}:Props) => {
            
         </div>
     </div>
+    </>
   )
 }
 

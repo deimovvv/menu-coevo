@@ -8,6 +8,10 @@
 }
 
 .canvas-test{
+ /* background-color: rebeccapurple; */
+/*  width: 300px !important;
+ height: 300px !important;
+ margin-left: 290px; */
  
 
 }
@@ -23,7 +27,7 @@ body {
   background-color: whitesmoke;
   color: var(--txt-color);
   font-family: 'Fragment Mono', monospace;
-
+    font-size: small;
  
 }
 

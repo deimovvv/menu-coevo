@@ -1,8 +1,8 @@
-import { OrbitControls } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber'
-import {useLoader} from '@react-three/fiber'
+import { OrbitControls, Environment } from '@react-three/drei';
+import { Canvas ,useLoader} from '@react-three/fiber'
 import { Suspense } from 'react';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { Model } from './Model';
 
 
 /* import {Perf} from 'r3f-perf' */
@@ -19,19 +19,29 @@ const model = useLoader(GLTFLoader, '/public/models/PizzaOptimizada2.glb')
     shadows
         camera={ {
             fov: 45,
-            near: 0.001,
+            near: 0.01,
             far: 2000,
-            position: [ -4, 1, 6 ]
+            position: [ -1, 1, -0.5 ]
         } }
         >
 
-        <OrbitControls makeDefault />
+        <OrbitControls makeDefault enableZoom={false} />
 
-        <directionalLight castShadow position={ [ 1, 2, 3 ] } intensity={ 10.5 } />
-        <ambientLight intensity={ 1.5 } />
+        <directionalLight castShadow position={ [ 1, 2, 3 ] } intensity={ 10.2 } />
+        <ambientLight intensity={ 2.2 } />
+       <Environment preset={'sunset'} />
+        
 
-      
-        <primitive    scale={ 2 } object={ model.scene } />
+
+
+        {/* <mesh receiveShadow position-y={ - 1 } rotation-x={ - Math.PI * 0.5 } scale={ 2 }>
+            <planeGeometry />
+            <meshStandardMaterial color="greenyellow" />
+        </mesh> */}
+
+        <primitive castShadow
+        receiveShadow  scale={0.025} object={ model.scene } />
+        <Model/>
     
 
     </Canvas>

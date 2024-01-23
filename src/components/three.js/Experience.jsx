@@ -1,7 +1,9 @@
 import { OrbitControls, Environment } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber'
-/* import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader' */
+import { Canvas, useLoader } from '@react-three/fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Model } from './Model';
+import { Model2 } from './Model2';
+
 
 
 /* import {Perf} from 'r3f-perf' */
@@ -10,7 +12,7 @@ import { Model } from './Model';
 
 export default function Experience(){
 
-/* const model = useLoader(GLTFLoader, '/public/models/PizzaOptimizada2.glb') */
+const model = useLoader(GLTFLoader, '/public/models/PizzaOptimizada2.glb')
 
 
     return <Canvas 
@@ -24,7 +26,7 @@ export default function Experience(){
         } }
         >
 
-        <OrbitControls makeDefault enableZoom={false} />
+        <OrbitControls makeDefault enableRotate={false}  enableZoom={false} autoRotate={true} />
 
         <directionalLight castShadow position={ [ 1, 2, 3 ] } intensity={ 10.2 } />
         <ambientLight intensity={ 2.2 } />
@@ -39,8 +41,10 @@ export default function Experience(){
         </mesh> */}
 
        {/*  <primitive castShadow
-        receiveShadow  scale={0.025} object={ model.scene } /> */}
+        receiveShadow  scale={1.25} object={ model.scene } /> */}
+
         <Model/>
+     {/*    <Model2/> */}
     
 
     </Canvas>

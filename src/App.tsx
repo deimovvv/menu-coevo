@@ -9,7 +9,6 @@ const App = () => {
     <main className="main">
       <Router>
           <Navbar />
-          //@ts-ignore
           <AppRoutes/>
       </Router>
       

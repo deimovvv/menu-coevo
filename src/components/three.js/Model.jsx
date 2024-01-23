@@ -7,7 +7,7 @@ import { useGLTF } from "@react-three/drei";
 
 
 export function Model() {
-  const { nodes, materials } = useGLTF("/public/models/PizzaOptimizada2.glb");
+  const { nodes, materials } = useGLTF("/models/PizzaOptimizada2.glb");
   return (
     <group dispose={null}>
       <mesh

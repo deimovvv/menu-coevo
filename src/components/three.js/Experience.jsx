@@ -1,8 +1,8 @@
 import { OrbitControls, Environment } from '@react-three/drei';
-import { Canvas, useLoader } from '@react-three/fiber'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { Canvas } from '@react-three/fiber'
+/* import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader' */
 import { Model } from './Model';
-import { Model2 } from './Model2';
+/* import { Model2 } from './Model2'; */
 
 
 
@@ -12,8 +12,8 @@ import { Model2 } from './Model2';
 
 export default function Experience(){
 
-const model = useLoader(GLTFLoader, '/public/models/PizzaOptimizada2.glb')
-
+/* const model = useLoader(GLTFLoader, '/public/models/PizzaOptimizada2.glb')
+ */
 
     return <Canvas 
         className="canvas-test"

@@ -1,5 +1,5 @@
 import { OrbitControls, Environment } from '@react-three/drei';
-import { Canvas ,useLoader} from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 /* import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader' */
 import { Model } from './Model';
 

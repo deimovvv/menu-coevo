@@ -1,6 +1,6 @@
 import { Product } from '../../../types/Product'
 import Experience from '../../three.js/Experience';
-import { Model } from '../../three.js/Model'
+/* import { Model } from '../../three.js/Model' */
 import style from './Product.module.css'
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
 }
 
 const ProductCard = ({product}:Props) => {
-    const {name, description, price, image} = product
+    const {name, description, price, } = product
 
   return (
     <>  

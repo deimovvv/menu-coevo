@@ -15,7 +15,7 @@ export function Model() {
         receiveShadow
         geometry={nodes.pizza.geometry}
         material={materials.pizza}
-        scale={0.025}
+        scale={0.020}
       />
     </group>
   );

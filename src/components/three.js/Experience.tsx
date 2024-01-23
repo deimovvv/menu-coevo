@@ -1,7 +1,6 @@
 import { OrbitControls, Environment } from '@react-three/drei';
 import { Canvas ,useLoader} from '@react-three/fiber'
-import { Suspense } from 'react';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+/* import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader' */
 import { Model } from './Model';
 
 
@@ -11,7 +10,7 @@ import { Model } from './Model';
 
 export default function Experience(){
 
-const model = useLoader(GLTFLoader, '/public/models/PizzaOptimizada2.glb')
+/* const model = useLoader(GLTFLoader, '/public/models/PizzaOptimizada2.glb') */
 
 
     return <Canvas 
@@ -39,8 +38,8 @@ const model = useLoader(GLTFLoader, '/public/models/PizzaOptimizada2.glb')
             <meshStandardMaterial color="greenyellow" />
         </mesh> */}
 
-        <primitive castShadow
-        receiveShadow  scale={0.025} object={ model.scene } />
+       {/*  <primitive castShadow
+        receiveShadow  scale={0.025} object={ model.scene } /> */}
         <Model/>
     
 

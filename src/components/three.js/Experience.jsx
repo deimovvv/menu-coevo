@@ -12,8 +12,8 @@ import { Model } from './Model';
 
 export default function Experience(){
 
-/* const model = useLoader(GLTFLoader, '/public/models/PizzaOptimizada2.glb')
- */
+/* const model = useLoader(GLTFLoader, '/models/PizzaOptimizada2.glb') */
+
 
     return <Canvas 
         className="canvas-test"
@@ -26,7 +26,7 @@ export default function Experience(){
         } }
         >
 
-        <OrbitControls makeDefault /* enableRotate={false}  */ enableZoom={false} autoRotate={true} />
+        <OrbitControls makeDefault minPolarAngle={0} maxPolarAngle={1.0}enableZoom={false} autoRotate={true} />
 
         <directionalLight castShadow position={ [ 1, 2, 3 ] } intensity={ 10.2 } />
         <ambientLight intensity={ 2.2 } />
@@ -44,7 +44,7 @@ export default function Experience(){
         receiveShadow  scale={1.25} object={ model.scene } /> */}
 
         <Model/>
-     {/*    <Model2/> */}
+      {/*  /*  <Model2/> */} 
     
 
     </Canvas>

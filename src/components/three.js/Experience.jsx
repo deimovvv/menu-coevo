@@ -26,7 +26,7 @@ export default function Experience(){
         } }
         >
 
-        <OrbitControls makeDefault enableRotate={false}  enableZoom={false} autoRotate={true} />
+        <OrbitControls makeDefault /* enableRotate={false}  */ enableZoom={false} autoRotate={true} />
 
         <directionalLight castShadow position={ [ 1, 2, 3 ] } intensity={ 10.2 } />
         <ambientLight intensity={ 2.2 } />

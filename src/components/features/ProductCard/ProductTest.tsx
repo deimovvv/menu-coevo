@@ -1,5 +1,4 @@
-import React from 'react'
-import Experience from '../../three.js/Experience.Jsx'
+/* import Experience from '../../three.js/Experience.Jsx'
 
 const ProductTest = () => {
   return (
@@ -10,4 +9,4 @@ const ProductTest = () => {
   )
 }
 
-export default ProductTest
+export default ProductTest */

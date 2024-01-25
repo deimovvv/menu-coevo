@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 
 import style from './Home.module.css'
 import ProductCard from '../../features/ProductCard/ProductCard';
-import ProductTest from '../../features/ProductCard/ProductTest';
+/* import ProductTest from '../../features/ProductCard/ProductTest'; */
 
 import { ProductService } from '../../../services/ProductService';
 import { Product } from '../../../types/Product';

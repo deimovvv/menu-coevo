@@ -12,9 +12,10 @@ const ProductCard = ({product}:Props) => {
 
   return (
     <>  
+     
     <div className={style.container}>
         <div className={style.image_container}>
-        <Experience/>
+        <Experience   />
              
         </div>
        

@@ -1,18 +1,23 @@
-import { OrbitControls, Environment } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber'
-/* import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader' */
+import { OrbitControls, Environment, Html, useProgress } from '@react-three/drei';
+import { Canvas, useLoader   } from '@react-three/fiber'
+import { Suspense } from 'react';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Model } from './Model';
+import ModelTest from './ModelTest';
 /* import { Model2 } from './Model2'; */
 
-
-
-/* import {Perf} from 'r3f-perf' */
-/*  */
+function Loader() {
+    const { progress } = useProgress()
+    return <Html center>{progress} % loaded</Html>
+  }
 
 
 export default function Experience(){
 
-/* const model = useLoader(GLTFLoader, '/models/PizzaOptimizada2.glb') */
+const model = useLoader(GLTFLoader, '/models/PizzaOptimizada2.glb')
+const model2 = useLoader(GLTFLoader, '/models/bicho10.glb')
+
+
 
 
     return <Canvas 
@@ -35,16 +40,24 @@ export default function Experience(){
 
 
 
-        {/* <mesh receiveShadow position-y={ - 1 } rotation-x={ - Math.PI * 0.5 } scale={ 2 }>
+        <mesh receiveShadow position-y={ - 1 } rotation-x={ - Math.PI * 0.5 } scale={ 2 }>
             <planeGeometry />
             <meshStandardMaterial color="greenyellow" />
-        </mesh> */}
+        </mesh>
+    
+       {/*  <Suspense fallback={null}>   <primitive castShadow
+        receiveShadow scale={0.80} object={ model.scene } /> </Suspense> */}
 
-       {/*  <primitive castShadow
-        receiveShadow  scale={1.25} object={ model.scene } /> */}
+        <ModelTest/> 
+        
+      
+       
 
+       {/*  <Suspense fallback={<Loader />}>
         <Model/>
-      {/*  /*  <Model2/> */} 
+        </Suspense>
+        */}
+      
     
 
     </Canvas>

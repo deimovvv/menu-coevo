@@ -40,23 +40,23 @@ const model2 = useLoader(GLTFLoader, '/models/bicho10.glb')
 
 
 
-        <mesh receiveShadow position-y={ - 1 } rotation-x={ - Math.PI * 0.5 } scale={ 2 }>
+      {/*   <mesh receiveShadow position-y={ - 1 } rotation-x={ - Math.PI * 0.5 } scale={ 2 }>
             <planeGeometry />
             <meshStandardMaterial color="greenyellow" />
-        </mesh>
+        </mesh> */}
     
        {/*  <Suspense fallback={null}>   <primitive castShadow
         receiveShadow scale={0.80} object={ model.scene } /> </Suspense> */}
 
-        <ModelTest/> 
+       {/*  <ModelTest/>  */}
         
       
        
 
-       {/*  <Suspense fallback={<Loader />}>
+        <Suspense fallback={<Loader />}>
         <Model/>
         </Suspense>
-        */}
+       
       
     
 

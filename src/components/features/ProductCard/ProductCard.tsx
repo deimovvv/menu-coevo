@@ -7,15 +7,19 @@ type Props = {
     product: Product
 }
 
-const ProductCard = ({product}:Props) => {
-    const {name, description, price, } = product
 
+
+const ProductCard = ({product}:Props) => {
+    const {name, description, price,   } = product
+
+  
   return (
     <>  
      
     <div className={style.container}>
         <div className={style.image_container}>
-        <Experience   />
+       {/*  <Experience   /> */}
+       <Experience />
              
         </div>
        

@@ -17,6 +17,7 @@ export function Model() {
         material={materials.pizza}
         scale={0.020}
       />
+       
     </group>
   );
 }

@@ -1,5 +1,6 @@
 import { Product } from '../../../types/Product'
 import Experience from '../../three.js/Experience';
+import Experience1 from '../../three.js/Experience1';
 /* import { Model } from '../../three.js/Model' */
 import style from './Product.module.css'
 
@@ -18,8 +19,9 @@ const ProductCard = ({product}:Props) => {
      
     <div className={style.container}>
         <div className={style.image_container}>
-       {/*  <Experience   /> */}
-       <Experience />
+       
+     {/*   <Experience /> */}
+     <Experience1/>
              
         </div>
        

@@ -6,6 +6,7 @@ import {
 } from "@react-three/drei";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
+import { BoxGeometry } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Model } from "./Model";
 import ModelTest from "./ModelTest";
@@ -16,15 +17,15 @@ function Loader() {
   return <Html center>{progress} % loaded</Html>;
 }
 
+const primitivos = [
+  { elemento: <planeGeometry />, tamaño: 2 },
+  { elemento: <sphereGeometry />, tamaño: 0.7 },
+  { elemento: <boxGeometry />, tamaño: 0.6 },
+];
 
 
 export default function Experience() {
-
-  
   const model = useLoader(GLTFLoader, "/models/PizzaOptimizada2.glb");
-
-
- 
 
   return (
     <Canvas
@@ -49,22 +50,22 @@ export default function Experience() {
       <ambientLight intensity={2.2} />
       <Environment preset={"sunset"} />
 
+      {primitivos.map((el) => (
+        <mesh
+          receiveShadow
+          position-y={-1}
+          rotation-x={-Math.PI * 0.5}
+          scale={el.tamaño}
+        >
+          {el.elemento}
 
-      
-     {/*   <mesh receiveShadow position-y={ - 1 } rotation-x={ - Math.PI * 0.5 } scale={ 2 }>
-            <planeGeometry />
-            <meshStandardMaterial color="blue" />
-           
-        </mesh>  */}
+          <meshStandardMaterial color="blue" />
+        </mesh>
+      ))}
 
-        {/* <ModelTest /> */}
+      {/*  <ModelTest /> */}
 
-        <Model/>
-
-    
-      
-
-       
+      {/* <Model/> */}
     </Canvas>
   );
 }

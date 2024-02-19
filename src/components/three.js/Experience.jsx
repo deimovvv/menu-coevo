@@ -8,8 +8,8 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
 import { BoxGeometry } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { Model } from "./Model";
-import ModelTest from "./ModelTest";
+/* import { Model } from "./Model";
+import ModelTest from "./ModelTest"; */
 import { ModelPizza1 } from "./PizzaOptimizada2";
 import { ModelPizza2 } from "./PizzaOptimizada3";
 /* import { Model2 } from './Model2'; */

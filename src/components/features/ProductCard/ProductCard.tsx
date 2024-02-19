@@ -1,6 +1,6 @@
 import { Product } from '../../../types/Product'
 import Experience from '../../three.js/Experience';
-import Experience1 from '../../three.js/Experience1';
+/* import Experience1 from '../../three.js/Experience1'; */
 /* import { Model } from '../../three.js/Model' */
 import style from './Product.module.css'
 

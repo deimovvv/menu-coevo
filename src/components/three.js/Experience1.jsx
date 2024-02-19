@@ -10,35 +10,21 @@ import { BoxGeometry } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Model } from "./Model";
 import ModelTest from "./ModelTest";
-/* import { Model2 } from './Model2'; */
 
-function Loader() {
-  const { progress } = useProgress();
-  return <Html center>{progress} % loaded</Html>;
-}
 
-const primitivos = [
-  { elemento: "/models/PizzaOptimizada2.glb"},
-  { elemento: "/models/PizzaOptimizada3.glb" },
-  { elemento: "/models/bicho10.glb"},
+const models = [
+  { element: "/models/PizzaOptimizada2.glb" ,
+id: 1},
+  { element: "/models/bicho10.glb",
+id: 2 },
 ];
 
-const modelo =  "/models/PizzaOptimizada2.glb"
-
-
-
 export default function Experience() {
-  const model = useLoader(GLTFLoader, "/models/PizzaOptimizada2.glb");
+
 
   return (
     <Canvas
-      className="canvas-test"
-      shadows
-      camera={{
-        fov: 45,
-        near: 0.01,
-        far: 2000,
-        position: [-1, 1, -0.5],
+      className="canvas-test" shadows camera={{     fov: 45,near: 0.01, far: 2000,  position: [-1, 1, -0.5],
       }}
     >
       <OrbitControls
@@ -53,33 +39,20 @@ export default function Experience() {
       <ambientLight intensity={2.2} />
       <Environment preset={"sunset"} />
 
-      <mesh
-          receiveShadow
-          position-y={-1}
-          rotation-x={-Math.PI * 0.5}
-          scale={1}
-        >
-          <planeGeometry/>
-          <meshStandardMaterial color="blue" />
-        </mesh>
-
-
-      {/* {
-        primitivos.map((el, i) => (
-        <ModelTest key={i} elemento={el.elemento} />
-        ))
-      }
- */}
-
-      <ModelTest  elemento={modelo}/>
-    
+      <mesh receiveShadow position-y={-1} rotation-x={-Math.PI * 0.5} scale={1}>
+        <planeGeometry />
+        <meshStandardMaterial color="blue" />
+      </mesh>
       
+      {/* MAP FROM MODELS ARRAY */}
+     {/*  {models.map((model, id) => {
+       return( 
+       <ModelTest key={id} modelPath={model.element} />)
+      })} */}
 
 
+<ModelTest  modelPath="/models/PizzaOptimizada2.glb" />
 
-     
-
-   
     </Canvas>
   );
 }

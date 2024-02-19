@@ -10,7 +10,7 @@ import { Category } from '../../../types/Product'
 
 const Navbar = () => {
     const {setSelectedCategory, categories} = useContext<ICategoryContext>(CategoryContext)
-    const [menuIsOpen, setMenuIsOpen] = useState<boolean>(true)
+    const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false)
 
 
     const toggleMenu = ()=> setMenuIsOpen(!menuIsOpen)

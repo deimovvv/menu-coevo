@@ -11,7 +11,7 @@ export function ModelPizza1(props) {
   const { nodes, materials } = useGLTF('/models/PizzaOptimizada2-transformed.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.pizza.geometry} material={materials.pizza} scale={0.025} />
+      <mesh geometry={nodes.pizza.geometry} material={materials.pizza} scale={0.022} />
     </group>
   )
 }

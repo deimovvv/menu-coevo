@@ -18,7 +18,7 @@ const ProductCard = ({product}:Props) => {
     <div className={style.container}>
         <div className={style.image_container}>
        
-     <Experience  value={id} />
+     <Experience  id={id} />
       
              
         </div>
